@@ -26,7 +26,7 @@ app.get("/api/v1/search/get_coords", (req, res) => {
   const { search_type, query } = req.query;
   axios
     .get(
-      `https://theguestbook.com/api/v1/search/get_coords?search_type=City&query=${query}`
+      `https://theguestbook.com/api/v1/search/get_coords?search_type=${search_type}&query=${query}`
     )
     .then((response) => {
       res.json(response.data);
